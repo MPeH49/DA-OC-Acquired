@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Episode One: The Pinault Family — FO &amp; UHNW Network Briefing</title>
+<meta name="description" content="The Complete History & Strategy of the Pinault Family — Groupe Artémis. An Acquired-style briefing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0d1321; --bg2:#141b2e; --card:#1a2238; --ink:#e8e6df; --muted:#9aa3b5;
+    --gold:#d4a843; --teal:#5eead4; --rule:#2a3450; --bear:#e07a5f; --bull:#81b29a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.7;font-size:17px}
+  ::selection{background:var(--gold);color:#0d1321}
+
+  .progress{position:fixed;top:0;left:0;height:3px;background:var(--gold);width:0%;z-index:99;transition:width .1s}
+
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
+
+  /* HERO */
+  .hero{padding:90px 0 70px;background:
+    radial-gradient(ellipse 80% 60% at 70% -10%, rgba(212,168,67,.13), transparent),
+    radial-gradient(ellipse 60% 50% at 10% 110%, rgba(94,234,212,.06), transparent);
+    border-bottom:1px solid var(--rule)}
+  .kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:22px}
+  .kicker span{color:var(--muted)}
+  h1{font-family:'Fraunces',serif;font-weight:800;font-size:clamp(38px,6vw,62px);line-height:1.05;letter-spacing:-.01em}
+  h1 em{font-style:italic;color:var(--gold)}
+  .dek{margin-top:24px;font-size:20px;color:var(--muted);font-weight:400;max-width:620px}
+  .meta{margin-top:34px;display:flex;gap:28px;flex-wrap:wrap;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+  .meta b{color:var(--ink);display:block;font-size:15px;letter-spacing:0;text-transform:none;margin-top:2px}
+
+  /* NAV */
+  nav{position:sticky;top:0;background:rgba(13,19,33,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);z-index:50}
+  nav .wrap{display:flex;gap:4px;overflow-x:auto;padding:0 24px}
+  nav a{color:var(--muted);text-decoration:none;font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:14px 12px;white-space:nowrap}
+  nav a:hover{color:var(--gold)}
+
+  /* SECTIONS */
+  section{padding:64px 0 8px}
+  .secnum{font-family:'Fraunces',serif;font-size:15px;color:var(--gold);letter-spacing:.25em;text-transform:uppercase;font-weight:600}
+  h2{font-family:'Fraunces',serif;font-size:clamp(28px,4vw,40px);font-weight:800;margin:10px 0 26px;line-height:1.15}
+  h3{font-family:'Fraunces',serif;font-size:21px;font-weight:600;color:var(--gold);margin:34px 0 12px}
+  p{margin-bottom:20px;color:#cfd4de}
+  p.lead{font-size:20px;color:var(--ink)}
+  a{color:var(--teal)}
+  .coldopen{font-family:'Fraunces',serif;font-style:italic;font-size:22px;line-height:1.6;color:var(--ink);border-left:3px solid var(--gold);padding-left:26px;margin:10px 0 10px}
+  .coldopen .tagline{display:block;margin-top:14px;color:var(--gold);font-size:17px}
+
+  /* SNAPSHOT TABLE */
+  .snapshot{width:100%;border-collapse:collapse;margin:8px 0 20px;font-size:15.5px}
+  .snapshot td{padding:13px 16px;border-bottom:1px solid var(--rule);vertical-align:top}
+  .snapshot td:first-child{color:var(--gold);font-weight:600;width:200px;text-transform:uppercase;font-size:12px;letter-spacing:.1em;padding-top:16px}
+
+  /* PLAYBOOK */
+  .play{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:24px 26px;margin-bottom:16px}
+  .play b{color:var(--gold);font-family:'Fraunces',serif;font-size:18px;display:block;margin-bottom:6px}
+  .play span{color:#cfd4de;font-size:16px}
+
+  /* PEOPLE */
+  .person{display:flex;gap:18px;background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:22px 24px;margin-bottom:14px;align-items:flex-start}
+  .avatar{flex:0 0 52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#8a6d2a);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:800;font-size:19px;color:#0d1321}
+  .person h4{font-size:17px;font-weight:700}
+  .person h4 a{color:var(--ink);text-decoration:none;border-bottom:1px dashed var(--teal)}
+  .person h4 a:hover{color:var(--teal)}
+  .person .role{color:var(--gold);font-size:13px;text-transform:uppercase;letter-spacing:.1em;font-weight:600;margin:2px 0 8px}
+  .person p{font-size:15px;margin:0;color:var(--muted)}
+
+  /* HEADLINES */
+  .headline{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--rule)}
+  .headline .date{flex:0 0 86px;font-family:'Fraunces',serif;color:var(--gold);font-weight:600;font-size:15px;padding-top:2px}
+  .headline p{margin:0;font-size:16px}
+  .headline a{font-size:13px;color:var(--teal);text-decoration:none}
+  .headline a:hover{text-decoration:underline}
+
+  /* BULL BEAR */
+  .bb{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:8px 0 26px}
+  @media(max-width:640px){.bb{grid-template-columns:1fr}}
+  .bb .card{border-radius:12px;padding:26px}
+  .bb .bull{background:rgba(129,178,154,.09);border:1px solid rgba(129,178,154,.4)}
+  .bb .bear{background:rgba(224,122,95,.08);border:1px solid rgba(224,122,95,.4)}
+  .bb h4{font-family:'Fraunces',serif;font-size:20px;margin-bottom:12px}
+  .bb .bull h4{color:var(--bull)} .bb .bear h4{color:var(--bear)}
+  .bb p{font-size:15.5px;margin:0}
+
+  .grade{display:flex;align-items:center;gap:24px;background:var(--card);border:1px solid var(--gold);border-radius:14px;padding:28px;margin:10px 0 20px}
+  .grade .letter{font-family:'Fraunces',serif;font-size:64px;font-weight:800;color:var(--gold);line-height:1}
+  .grade p{margin:0;font-size:16px}
+
+  /* CARVE OUTS */
+  .carve{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:20px 24px;margin-bottom:12px;font-size:15.5px;color:#cfd4de}
+  .carve b{color:var(--ink)}
+
+  footer{margin-top:70px;padding:40px 0 60px;border-top:1px solid var(--rule);color:var(--muted);font-size:13.5px}
+  footer .brand{font-family:'Fraunces',serif;color:var(--gold);font-size:16px;font-weight:600;margin-bottom:8px}
+  .divider{height:1px;background:var(--rule);margin:54px 0 0}
+</style>
+</head>
+<body>
+<div class="progress" id="bar"></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">FO &amp; UHNW Network Briefing <span>· Episode One · June 2026</span></div>
+    <h1>The Complete History &amp; Strategy of <em>the Pinault Family</em></h1>
+    <p class="dek">Timber → retail → luxury → culture. How a school-leaver from Brittany built Europe's most contrarian family empire — and what it means for natural capital.</p>
+    <div class="meta">
+      <div>Holding<b>Groupe Artémis</b></div>
+      <div>Est. wealth<b>c.$25–30bn</b></div>
+      <div>Category<b>Empire Builder</b></div>
+      <div>OC Grade<b style="color:var(--gold)">B</b></div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#story">History</a><a href="#empire">The Empire</a><a href="#playbook">Playbook</a><a href="#brand">The Brand</a><a href="#power">Power</a><a href="#nature">Natural Capital</a><a href="#people">People</a><a href="#headlines">2026</a><a href="#verdict">Bull &amp; Bear</a><a href="#carveouts">Carve Outs</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="story">
+  <div class="coldopen">
+    In March 1999, a 62-year-old former timber trader from Brittany walked into luxury's most public brawl, wired $3 billion over a weekend, and took Gucci out from under the nose of Bernard Arnault — a man with twice his resources and ten times his fashion credentials.
+    <span class="tagline">As ever: it's never about the asset. It's about the operator.</span>
+  </div>
+
+  <table class="snapshot">
+    <tr><td>Holding vehicle</td><td>Groupe Artémis (Paris), founded 1992 — 100% family-owned</td></tr>
+    <tr><td>Generation</td><td>Second. François Pinault (89) founder; François-Henri Pinault (64) in charge since 2003</td></tr>
+    <tr><td>Crown jewels</td><td>Kering (42% of capital), Christie's, Château Latour, CAA, Pinault Collection</td></tr>
+    <tr><td>One-line read</td><td>Contrarian dealmakers, art-world royalty, currently deleveraging while they fix Gucci</td></tr>
+  </table>
+
+  <div class="secnum">Part 1</div>
+  <h2>History &amp; Facts</h2>
+  <p class="lead">Every great episode starts with the unlikely origin, and few are more unlikely than this one.</p>
+  <p>François Pinault left school at sixteen, the son of a timber farmer in rural Brittany, and in 1963 started a timber-trading business. His first fortune was built on a habit that would define everything that followed: <strong>buying when everyone else was selling.</strong> Through the downturns of the 1970s and 80s he acquired struggling timber and building-materials rivals for next to nothing, listed Pinault SA in 1988, and then did something most founders never manage — he abandoned the industry that made him.</p>
+  <p>Through the 1990s he rolled the timber money into retail: the CFAO trading group, Conforama, the Printemps department stores and La Redoute, creating Pinault-Printemps-Redoute (PPR). He bought Château Latour in 1993 and Christie's in 1998 — trophy assets that doubled as an entry ticket to a world far from Brittany. Then came the defining move: the 1999 Gucci raid, igniting luxury's most famous feud. The "handbag wars" ended with Pinault holding Gucci, Yves Saint Laurent, Bottega Veneta, Balenciaga and Boucheron — the foundation of what became Kering.</p>
+  <p>In 2003, aged 66, he handed everything to his son. François-Henri completed the transformation: PPR shed retail entirely and re-emerged in 2013 as Kering, a pure-play luxury group. The Gucci supercycle that followed made the family one of the richest in Europe — and the subsequent Gucci slump is the reason the empire is in its most defensive posture in two decades. In 2025, with group profits down 46%, Kering appointed its first-ever outside CEO, ex-Renault boss Luca de Meo, while François-Henri pulled back to Paris to run Artémis directly. The 2026 reset is in full swing: beauty sold to L'Oréal for $4.6bn, the Puma stake sold to ANTA Sports, Valentino postponed, and a turnaround plan that promises to double margins.</p>
+  <div class="divider"></div>
+</section>
+
+<section id="empire">
+  <div class="secnum">Part 2</div>
+  <h2>The Empire Today</h2>
+  <h3>2.1 — Kering</h3>
+  <p>The engine. Gucci, Saint Laurent, Bottega Veneta, Balenciaga, Boucheron, plus Kering Eyewear. Revenue c.€17bn and falling; Gucci is roughly half of sales and two-thirds of profit, which is the whole problem — eleven straight quarters of organic decline. De Meo's plan (April 2026) targets more than doubling the 11.1% operating margin and &gt;20% return on capital. The family holds c.42% of capital and a majority of votes: control is not in question, performance is.</p>
+  <h3>2.2 — Christie's</h3>
+  <p>The world's largest auction house (c.$5–6bn in annual sales), privately held since 1998. Less a profit centre than a switchboard: a live map of where the world's wealth is moving — and a client list that overlaps almost perfectly with OC's target investor universe.</p>
+  <h3>2.3 — Artémis Domaines</h3>
+  <p>Château Latour (bought 1993, farmed biodynamically), Clos de Tart, Champagne Jacquesson, Eisele Vineyard. Notable for OC: this is the family's <strong>direct agricultural land ownership</strong>, run on long-horizon, soil-first principles — the closest thing in the portfolio to natural capital conviction expressed on their own balance sheet.</p>
+  <h3>2.4 — Creative Artists Agency</h3>
+  <p>Majority stake acquired 2023 at a c.$7bn valuation — the big bet on talent, sport and entertainment IP, and the main growth vector outside luxury.</p>
+  <h3>2.5 — Pinault Collection &amp; Stade Rennais</h3>
+  <p>One of the world's great private contemporary art collections (Bourse de Commerce, Palazzo Grassi, Punta della Dogana), plus the hometown football club. Both matter as culture: the family converts capital into institutional permanence and soft power, deliberately.</p>
+  <div class="divider"></div>
+</section>
+
+<section id="playbook">
+  <div class="secnum">Part 3</div>
+  <h2>The Playbook</h2>
+  <div class="play"><b>Buy in the storm</b><span>Timber in the 70s, retail in the 90s recession, Gucci mid-raid, CAA when media valuations wobbled. The edge has always been acting decisively when assets are contested or unloved.</span></div>
+  <div class="play"><b>Sell the past without sentiment</b><span>Timber, then the entire retail empire, now beauty and Puma. No legacy business is sacred once it stops compounding.</span></div>
+  <div class="play"><b>Premiumise relentlessly</b><span>From Printemps to Gucci: take a brand with latent equity, raise price architecture, shrink distribution, elevate creative leadership.</span></div>
+  <div class="play"><b>Convert money into permanence</b><span>Museums, a premier grand cru, Christie's — assets that compound socially as well as financially, and open doors money alone cannot.</span></div>
+  <div class="play"><b>Family control, hired excellence</b><span>The cascade holding keeps control absolute; the de Meo appointment shows willingness to bring in outside operators when the family lacks the answer.</span></div>
+  <div class="divider"></div>
+</section>
+
+<section id="brand">
+  <div class="secnum">Part 4</div>
+  <h2>The Brand</h2>
+  <p class="lead">If the Playbook is how the family buys, The Brand is how it builds.</p>
+  <p>The Pinault theory of premium has three moving parts. First, <strong>scarcity is manufactured, not found</strong>: Gucci at its 2019 peak sold dreams at near-100% gross margin because distribution was strangled, logos were rationed, and the creative director was treated as auteur rather than employee. Second, <strong>premium is permission to cross categories</strong> — the same equity that sells a handbag sells eyewear, beauty licences and hotel partnerships, which is why de Meo's first moves were about protecting brand altitude (exiting wholesale, postponing Valentino, licensing beauty to the world's best operator) rather than chasing volume. Third, and most distinctive: <strong>the family layers commercial brands with non-commercial ones.</strong> Christie's, Latour and the Pinault Collection never appear on an earnings call, but they make the commercial brands credible — provenance by association.</p>
+  <p>The cautionary tale is equally instructive. Kering's fashion-cycle model — bet big on a designer, ride the wave, repeat — generates spectacular upside and equally spectacular drawdowns, which is precisely the contrast with Hermès' slow-compounding heritage model that the market now punishes Kering for. The read-across for OC is direct: <strong>natural capital sold as provenance, permanence and verified scarcity is a Hermès, not a Gucci.</strong> This family understands that distinction better than almost anyone alive, because they have been on both sides of it.</p>
+  <div class="divider"></div>
+</section>
+
+<section id="power">
+  <div class="secnum">Part 5</div>
+  <h2>Power</h2>
+  <p>In 7 Powers terms, the empire rests on <strong>branding</strong> — Gucci and Saint Laurent's pricing power, when healthy, is among the best in consumer goods — and on <strong>cornered resources</strong>: there is exactly one Château Latour, and Christie's 260-year name cannot be replicated at any price. The structural weakness, fully on display since 2023, is that fashion-led luxury is cyclical and creative-director-dependent in a way that heritage luxury is not. The family's power is durable; Kering's earnings are not — and that gap currently dictates their behaviour as investors.</p>
+  <div class="divider"></div>
+</section>
+
+<section id="nature">
+  <div class="secnum">Part 6</div>
+  <h2>The Natural Capital Angle</h2>
+  <p class="lead">This fortune began as trees.</p>
+  <p>Land literacy is in the family DNA in a way that is rare among luxury dynasties, and it shows up institutionally: Kering pioneered the <strong>Environmental Profit &amp; Loss account</strong> (putting a monetary value on nature impacts across its supply chain), launched the <strong>Regenerative Fund for Nature</strong> with Conservation International (targeting one million hectares of luxury-supply-chain farmland transitioned to regenerative practice), and co-anchored the c.€300m <strong>Climate Fund for Nature</strong> with L'Occitane — one of the largest corporate nature-investment vehicles in existence. The wine estates farm biodynamically.</p>
+  <p>The implication for OC: this family does not need persuading that nature is investable — but their nature capital currently flows through Kering's corporate vehicles, not the family office, and the conversation should respect that distinction.</p>
+  <div class="divider"></div>
+</section>
+
+<section id="people">
+  <div class="secnum">Part 7</div>
+  <h2>Key People</h2>
+  <div class="person"><div class="avatar">FH</div><div>
+    <h4><a href="https://en.wikipedia.org/wiki/Fran%C3%A7ois-Henri_Pinault" target="_blank" rel="noopener">François-Henri Pinault</a></h4>
+    <div class="role">Chairman, Artémis &amp; Kering</div>
+    <p>The decision-maker. Now running Artémis full-time from Paris after ceding the Kering CEO role — more available, and more focused on the family balance sheet, than at any point in 20 years.</p>
+  </div></div>
+  <div class="person"><div class="avatar">FP</div><div>
+    <h4><a href="https://en.wikipedia.org/wiki/Fran%C3%A7ois_Pinault" target="_blank" rel="noopener">François Pinault</a></h4>
+    <div class="role">Founder · 89</div>
+    <p>Still the cultural centre of gravity; the timber-farmer origin story is the authentic personal hook to land and nature.</p>
+  </div></div>
+  <div class="person"><div class="avatar">LdM</div><div>
+    <h4><a href="https://fr.linkedin.com/in/lucademeo" target="_blank" rel="noopener">Luca de Meo</a></h4>
+    <div class="role">CEO, Kering · since Sept 2025</div>
+    <p>First outside CEO; owns the Gucci turnaround and Kering's corporate sustainability budgets. Active on LinkedIn ("Doer &amp; Dreamer").</p>
+  </div></div>
+  <div class="divider"></div>
+</section>
+
+<section id="headlines">
+  <div class="secnum">Part 8</div>
+  <h2>2026 Headlines</h2>
+  <div class="headline"><div class="date">Apr 2026</div><p>De Meo unveils turnaround at Capital Markets Day: more than double the 11.1% operating margin, ROCE &gt;20%, reduce Gucci dependence. <a href="https://www.cnbc.com/2026/04/16/kering-stock-ker-gucci-cmd-turnaround-profit-strategy.html" target="_blank" rel="noopener">CNBC →</a></p></div>
+  <div class="headline"><div class="date">Apr 2026</div><p>L'Oréal completes its $4.6bn acquisition of Kering Beauté; brands move to a long-term licence model. <a href="https://hypebeast.com/2026/4/loreal-acquires-kering-beaute-4-6-billion-usd-deal-announcement" target="_blank" rel="noopener">Hypebeast →</a></p></div>
+  <div class="headline"><div class="date">10 Jun 2026</div><p>India's CCI clears ANTA Sports' c.$1.8bn purchase of Artémis's 29.06% Puma stake; closing expected by end-2026. <a href="https://www.drapersonline.com/news/anta-sports-offers-to-buy-kering-owners-29-puma-stake" target="_blank" rel="noopener">Drapers →</a></p></div>
+  <div class="headline"><div class="date">Ongoing</div><p>Gucci logs an 11th consecutive quarter of organic sales decline; analysts back the plan but the proof is 2027. <a href="https://www.modaes.com/global/companies/luca-de-meos-kering-downsizing-and-dependence-on-gucci-to-return-to-growth" target="_blank" rel="noopener">Modaes →</a></p></div>
+  <div class="headline"><div class="date">Ongoing</div><p>Artémis payouts forecast down c.40% to c.€520m; €400m raised to support Kering; family insists no financial strain. <a href="https://ww.fashionnetwork.com/news/Pinault-family-sharpens-artemis-strategy-amid-leadership-shift-and-rising-debt,1768066.html" target="_blank" rel="noopener">FashionNetwork →</a></p></div>
+  <div class="divider"></div>
+</section>
+
+<section id="verdict">
+  <div class="secnum">Part 9</div>
+  <h2>Bull &amp; Bear — and the Grade</h2>
+  <div class="bb">
+    <div class="card bull"><h4>🐂 The Bull Case</h4><p>Authentic personal connection to land and forestry. The most institutionally advanced nature-finance track record of any luxury family (EP&amp;L, Regenerative Fund, Climate Fund for Nature). Direct biodynamic land ownership through the wine estates. Christie's network is effectively a directory of OC's wider target audience. Puma and beauty disposals mean fresh liquidity by end-2026.</p></div>
+    <div class="card bear"><h4>🐻 The Bear Case</h4><p>Actively deleveraging with payouts down 40% — new illiquid commitments are a hard sell this year. Attention consumed by the Gucci turnaround. Nature spending is structured as Kering corporate strategy rather than family-office allocation. France-centric ecosystem of advisers and causes.</p></div>
+  </div>
+  <div class="grade">
+    <div class="letter">B</div>
+    <p><strong>A-grade strategic fit, C-grade timing.</strong> The disposals create a window in 2027 when Artémis is liquid again and looking for the next permanent asset. The warm path is the nature-finance teams around Kering's funds and François-Henri personally — via the art/conservation and land worlds, not a cold institutional pitch.</p>
+  </div>
+  <div class="divider"></div>
+</section>
+
+<section id="carveouts">
+  <div class="secnum">Part 10</div>
+  <h2>Carve Outs</h2>
+  <div class="carve"><b>Acquired: the LVMH episode</b> — the definitive treatment of the rival empire, and the best single explainer of luxury economics in audio.</div>
+  <div class="carve"><b>The House of Gucci, Sara Gay Forden</b> — the full story of the 1999 handbag wars from the Gucci side.</div>
+  <div class="carve"><b>Kering's EP&amp;L methodology</b> (kering.com) — still the most serious attempt by any corporate to put a balance-sheet number on nature.</div>
+  <div class="carve"><b>The Bourse de Commerce, Paris</b> — if a meeting ever happens in Paris, walk it first; it is the family's worldview rendered in architecture.</div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">FO &amp; UHNW Network Briefing</div>
+    Episode One of the family office briefing series · Prepared June 2026 · Sources linked inline; facts re-verified at production.<br>
+    Strictly private &amp; confidential — internal use only.
+  </div>
+</footer>
+
+</main>
+<script>
+  const bar = document.getElementById('bar');
+  addEventListener('scroll', () => {
+    const h = document.documentElement;
+    bar.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
+  });
+</script>
+</body>
+</html>
